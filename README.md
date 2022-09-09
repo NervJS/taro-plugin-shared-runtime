@@ -1,6 +1,6 @@
 # taro-plugin-runtime
 
-> 多包共享Taro运行时插件
+> 微信小程序多分包、组件共享Taro运行时插件
 
 > 基于Taro 3.5.1、React 18.2.0构建，含有Taro插件和运行时封装
 

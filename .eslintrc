@@ -1,0 +1,77 @@
+{
+    "extends": [
+        "airbnb",
+        "airbnb-typescript"
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "ignorePatterns": [
+        "/*.js"
+    ],
+    "rules": {
+        "import/no-cycle": "off", // 循环引用
+        "@typescript-eslint/quotes": "off", // 引号规则
+        "arrow-body-style": "off", // 箭头函数样式
+        "@typescript-eslint/comma-dangle": "off", // 尾随逗号
+        "@typescript-eslint/no-shadow": "off", // 同名变量
+        "@typescript-eslint/indent": [
+            "error",
+            4
+        ], // 缩进
+        "@typescript-eslint/semi": "off", // 结尾分号
+        "@typescript-eslint/default-param-last": "off", // 有默认值的参数放在结尾
+        "@typescript-eslint/no-explicit-any": "error", // 不允许any类型
+        "@typescript-eslint/dot-notation": "off", // 要求使用点号
+        "react/function-component-definition": "off",
+        "react/jsx-indent": [
+            "error",
+            4
+        ], // 缩进
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ], // 缩进
+        "react/no-array-index-key": "off", // 禁止使用index作为key
+        "react/jsx-uses-react": "off", // react 17+ 不需要
+        "react/react-in-jsx-scope": "off", // react 17+ 不需要
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "react/destructuring-assignment": "off",
+        "react/require-default-props": "off",
+        "react/jsx-wrap-multilines": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "operator-assignment": "off",
+        "max-len": "off",
+        "arrow-parens": "off", // 箭头函数的参数使用圆括号
+        "operator-linebreak": "off", // 换行符风格
+        "no-await-in-loop": "off",
+        "no-plusplus": "off", // i++
+        "consistent-return": "off",
+        "quote-props": "off", // 对象字面量属性名称使用引号
+        "no-console": "off",
+        "func-names": "off",
+        "no-param-reassign": "off", // 禁止参数重新赋值
+        "prefer-destructuring": "off",
+        "guard-for-in": "off",
+        "no-continue": "off",
+        "default-param-last": "off",
+        "no-nested-ternary": "off",
+        "jsx-a11y/no-autofocus": "off",
+        "no-misleading-character-class": "off",
+        "prefer-regex-literals": "off",
+        "object-curly-newline": "off",
+        "no-spaced-func": "off",
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ],
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "max-classes-per-file": [
+            "error",
+            2
+        ]
+    }
+}

@@ -1,4 +1,4 @@
-const source = require('@tarojs/plugin-runtime/taro').default
+const source = require('@tarojs/plugin-shared-runtime/taro').default
 
 const taro = {
     ...source

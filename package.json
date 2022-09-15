@@ -1,6 +1,6 @@
 {
-  "name": "@tarojs/plugin-runtime",
-  "version": "0.0.1",
+  "name": "@tarojs/plugin-shared-runtime",
+  "version": "0.0.2",
   "private": false,
   "description": "",
   "type": "commonjs",
@@ -11,13 +11,18 @@
     "build": "rimraf dist && rimraf plugin && rollup -c ./rollup.config.js",
     "start": "rollup -c ./rollup.config.js -w"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NervJS/taro-plugin-shared-runtime.git"
+  },
+  "author": "baosiqing",
   "license": "MIT",
   "files": [
     "dist",
     "plugin"
   ],
   "sideEffects": false,
+  "homepage": "https://github.com/NervJS/taro-plugin-shared-runtime/blob/main/README.md",
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@babel/plugin-syntax-flow": "^7.17.12",

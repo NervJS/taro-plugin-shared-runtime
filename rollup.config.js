@@ -152,7 +152,7 @@ export default [{
     },
     external: (name) => {
         return [
-            '@tarojs/plugin-runtime/taro'
+            '@tarojs/plugin-shared-runtime/taro'
         ].find(item => name.indexOf(item) !== -1);
     },
     watch: {

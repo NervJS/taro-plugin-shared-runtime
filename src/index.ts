@@ -32,24 +32,24 @@ const plugin = (ctx, options) => {
         chain.merge({
             resolve: {
                 alias: {
-                    '@tarojs/taro': "@tarojs/plugin-runtime/plugin/taro-proxy"
+                    '@tarojs/taro': "@tarojs/plugin-shared-runtime/plugin/taro-proxy"
                 }
             },
             externals: [
                 (_context, request, callback) => {
                     const mapping = {
-                        "@tarojs/runtime": "@tarojs/plugin-runtime/runtime",
-                        "@tarojs/shared": "@tarojs/plugin-runtime/shared",
-                        "@tarojs/api": "@tarojs/plugin-runtime/api",
-                        "@tarojs/plugin-runtime/taro": "@tarojs/plugin-runtime/taro",
-                        "@tarojs/components": "@tarojs/plugin-runtime/components",
-                        "react-dom": "@tarojs/plugin-runtime/react-dom",
-                        "react-is": "@tarojs/plugin-runtime/react-is",
-                        "react$": "@tarojs/plugin-runtime/react",
-                        "react/jsx-runtime$": "@tarojs/plugin-runtime/react-jsx-runtime",
-                        "regenerator-runtime": "@tarojs/plugin-runtime/regenerator-runtime",
-                        "@tarojs/plugin-framework-react/dist/runtime": "@tarojs/plugin-runtime/framework-runtime",
-                        "@tarojs/plugin-platform-weapp/dist/runtime": "@tarojs/plugin-runtime/platform-runtime"
+                        "@tarojs/runtime": "@tarojs/plugin-shared-runtime/runtime",
+                        "@tarojs/shared": "@tarojs/plugin-shared-runtime/shared",
+                        "@tarojs/api": "@tarojs/plugin-shared-runtime/api",
+                        "@tarojs/plugin-shared-runtime/taro": "@tarojs/plugin-shared-runtime/taro",
+                        "@tarojs/components": "@tarojs/plugin-shared-runtime/components",
+                        "react-dom": "@tarojs/plugin-shared-runtime/react-dom",
+                        "react-is": "@tarojs/plugin-shared-runtime/react-is",
+                        "react$": "@tarojs/plugin-shared-runtime/react",
+                        "react/jsx-runtime$": "@tarojs/plugin-shared-runtime/react-jsx-runtime",
+                        "regenerator-runtime": "@tarojs/plugin-shared-runtime/regenerator-runtime",
+                        "@tarojs/plugin-framework-react/dist/runtime": "@tarojs/plugin-shared-runtime/framework-runtime",
+                        "@tarojs/plugin-platform-weapp/dist/runtime": "@tarojs/plugin-shared-runtime/platform-runtime"
                     }
 
                     const key = Object.keys(mapping).find(key => new RegExp(key).test(request));
@@ -80,7 +80,7 @@ const plugin = (ctx, options) => {
         return;
     }
 
-    ctx.helper.printLog("modify", '@tarojs/plugin-runtime', "replace platform");
+    ctx.helper.printLog("modify", '@tarojs/plugin-shared-runtime', "replace platform");
 
     const name = "weapp";
     const registered = ctx.platforms.has(name);

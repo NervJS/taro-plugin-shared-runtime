@@ -1,4 +1,4 @@
-# taro-plugin-runtime
+# taro-plugin-shared-runtime
 
 > 微信小程序多分包、组件共享Taro运行时插件
 
@@ -13,13 +13,13 @@
 在 Taro 项目根目录下安装
 
 ```bash
-npm i @tarojs/plugin-runtime
+npm i @tarojs/plugin-shared-runtime
 ```
 
 在原生小程序中安装运行时（如已安装请忽略）
 
 ```bash
-npm i @tarojs/plugin-runtime
+npm i @tarojs/plugin-shared-runtime
 ```
 
 安装成功后点击微信开发者工具菜单栏 => 工具 - 构建npm
@@ -32,7 +32,7 @@ const config = {
     ...
     plugins: [
         ...
-        ...(process.env.NODE_ENV === "development" ? [] : ["@tarojs/plugin-runtime"])
+        ...(process.env.NODE_ENV === "development" ? [] : ["@tarojs/plugin-shared-runtime"])
     ]
     ...
 }
